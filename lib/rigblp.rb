@@ -1,5 +1,9 @@
 require "rigblp/version"
 
 module Rigblp
-  # Your code goes here...
+  def self.logger
+    @logger ||= Logger.new(STDOUT)
+  end
+
+  autoload :Rigctl, "rigblp/rigctl"
 end
