@@ -6,6 +6,7 @@ module Rigblp
     @logger ||= Logger.new(STDOUT)
   end
 
+  autoload :Band, "rigblp/band"
   autoload :Rigctl, "rigblp/rigctl"
   autoload :Parport, "rigblp/parport"
 end
