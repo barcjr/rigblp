@@ -5,8 +5,11 @@ module Rigblp
   def self.logger
     @logger ||= Logger.new(STDOUT)
   end
-
-  autoload :Band, "rigblp/band"
-  autoload :Rigctl, "rigblp/rigctl"
-  autoload :Parport, "rigblp/parport"
 end
+
+require "rigblp/band"
+require "rigblp/command"
+require "rigblp/engine"
+require "rigblp/rigctl"
+require "rigblp/netblp"
+require "rigblp/parport"

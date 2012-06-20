@@ -12,4 +12,7 @@ Gem::Specification.new do |gem|
   gem.name          = "rigblp"
   gem.require_paths = ["lib"]
   gem.version       = Rigblp::VERSION
+
+  gem.add_runtime_dependency "thor", "~> 0.14.0"
+  gem.add_runtime_dependency "rest-client"
 end

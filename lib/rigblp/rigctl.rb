@@ -1,7 +1,8 @@
 class Rigblp::Rigctl
   def initialize options, command=nil
     command ||= `which rigctl`.strip
-    @command = [command, options].join(" ")
+    @command = [command.strip, options.strip].join(" ")
+    Rigblp.logger.info("rigctlp: #{@command}")
   end
 
   def frequency
