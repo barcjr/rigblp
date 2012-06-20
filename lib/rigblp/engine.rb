@@ -9,7 +9,7 @@ class Rigblp::Engine
   def step
     raise "No rigctl provided!" unless rigctl
     frequency = rigctl.frequency
-    if (@old_freq != frequency) || (@latest < (Time.now - 10))
+    if (@old_freq != frequency) || (@latest < (Time.now - 30))
       @old_freq = frequency
       @latest = Time.now
 
